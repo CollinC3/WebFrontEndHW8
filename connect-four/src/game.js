@@ -23,12 +23,6 @@ class Board extends Component {
     }
   }
 
-  selectedGame(){
-    this.setState({
-       boardState: new Array(7).fill(new Array(6).fill(null))
-    })
-  }
-
   makeMove(columnID){
     const boardCopy = this.state.boardState.map(function(arr) {
       return arr.slice();
@@ -71,13 +65,13 @@ class Board extends Component {
     }
 
     /*Contruct columns allocating column from board*/
-    let columns = [...Array(this.state.boardState.length)].map((x, i) => 
+    let columns = [...Array(this.state.boardState.length)].map((x, i) =>
       <Column 
           key={i}
           squares={this.state.boardState[i]}
           handleClick={() => this.handleClick(i)}
       ></Column>
-    )
+    );
 
     return (
       <div>
