@@ -17,13 +17,7 @@ class Board extends Component {
   constructor() {
     super();
     this.state = {
-      /*history: [
-        {
-          boardState: new Array(7).fill(new Array(6).fill(null))
-        }
-      ],*/
       boardState: new Array(7).fill(new Array(6).fill(null)),
-      //stepNumber: 0,
       playerTurn: 'Red',
       winner: ''
     }
